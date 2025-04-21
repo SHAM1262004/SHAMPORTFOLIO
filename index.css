@@ -1,0 +1,931 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body, html {
+    height: 100%;
+    background-color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+/*navbar code*/
+
+nav{
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    box-shadow: 1px 1px 5px rgba(42, 41, 41, 0.79);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:5px 25px 5px 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transition: 0.5s;
+}
+
+
+
+.port{
+    position: relative;
+    cursor: pointer;
+    font-size: 40px;
+    color: #a777e3;
+    margin-left: 20px;
+    letter-spacing: 2px;
+}
+
+.sub-nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.sub-nav ul li,
+.sub-nav2 ul li{
+    list-style: none;
+    font-size: 20px;
+    position: relative;
+}
+
+.sub-nav ul li a,
+.sub-nav2 ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.sub-nav ul li a:hover{
+    padding: 5px;
+    border-radius: 8px;
+    background-color: rgba(198, 118, 255, 0.5);
+    backdrop-filter: blur(100%);
+    font-family: 'Segoe UI', sans-serif;
+    transition: 0.2s;
+}
+
+.Nav-icons i{
+    color: white;
+}
+
+.nav-back{
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    border-radius: 8px;
+    padding: 5px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);    
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* sub-nav2*/
+
+.sub-nav2{
+    display: none;
+    color: white;
+    background-color: rgba(21, 21, 21, 0.726);
+    backdrop-filter: blur(20px);
+    width: 100%;
+    height: 200px;
+    z-index: 9998;
+}
+
+.sub-nav2 ul{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/*nav bar icons*/
+
+.Nav-icons{
+    position: relative;
+    display: none;
+}
+
+.fa-bars,.fa-xmark{
+    display: none;
+}
+
+@media only screen and (min-width:100px) and (max-width:650px){
+    .fa-bars{
+        display: block;
+        font-size: 30px;
+    }
+
+    .fa-xmark{
+        font-size: 30px;
+    }
+
+    .Nav-icons{
+        display: block;
+    }
+
+    .sub-nav{
+        display: none;
+        padding: 10px;
+    }
+
+    .sub-nav2{
+        display: block;
+        position: fixed;
+        top: -300px;
+        left: 0;
+        transition: 1s;
+    }
+    
+    
+}
+
+
+/*end of navbar code*/
+
+button{
+    cursor: pointer;
+}
+
+/*overall container code*/
+.container-fluid{
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px ;
+    background-color: black!important;
+    color: white;
+}
+.c{
+    color:#a777e3;
+}
+.f{
+    font-size: 3.2rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/*end of container code*/
+
+/*homepage codes*/
+.homepage{
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 60px;
+    display: flex;
+    position: relative;
+}
+
+.ani-box{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    align-content: center;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    animation-name: welcome1;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+    opacity: 0;
+    z-index: 9500;
+}
+
+@keyframes welcome1{
+    0%{
+        opacity: 1;
+    }
+
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.ani-box h1{
+    font-size: 3.5rem;
+    font-weight: bold;
+    animation-name: welcome2;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+}
+
+@keyframes welcome2{
+    0%{
+        opacity: 0.5;
+        transform: scale(0.4);
+    }
+
+    50%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+/*home page content box code*/
+.box1-content{
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: start;
+    align-content: center;
+}
+.b1{
+    background: linear-gradient(135deg, #6e8efb, #a777e3);   
+    color: white;
+    width: 150px;
+    height: 35px;
+    border: none;
+    border-radius: 8px;
+    margin: 5px;
+}
+
+.b2{
+    width: 150px;
+    height: 35px;
+    border: 1px solid white;
+    border-radius: 8px;
+    margin: 5px;
+}
+/*end of home page content box code*/
+
+/*home page image box code*/
+.box1-image{
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box1-image img{
+    width: 80%;
+    height: 100vh;
+}
+
+
+  
+/*end of homepage codes*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*aboutpage codes*/
+.aboutpage{
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 60px;
+    display: flex;
+    animation-name: aboutpage;
+    animation-duration: 3s;
+    animation-timeline: view();
+    animation-range: entry;
+}
+
+@keyframes aboutpage{
+    0%{
+        opacity: 10%;
+        transform: translatey(50%);
+    }
+    20%{
+        opacity: 50%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+.about-content{
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+}
+.about-content h1{
+    font-size: 60px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);    
+    font-family: 'Segoe UI', sans-serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.about-content button{
+    width: 150px;
+    height:30px;
+    border: none;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);   
+    border-radius: 5px;
+}
+.about-skills{
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+}
+.about-skills h1{
+    font-size: 60px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);    
+    font-family: 'Segoe UI', sans-serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.skills-overallbox{
+    width: 100%;
+    min-height: 70vh;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: auto auto;
+}
+.skills-boxes{
+    width: 100%;
+    min-height: 10vh;
+    /* animation-name: skillbox;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timeline: view();
+    animation-range: initial; */
+}
+
+/* @keyframes skillbox{
+    0%{
+        transform: scale(0.6);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+} */
+
+.skills-boxes-text{
+    width: 100%;
+    min-height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.aboutpage .about-skills .skills-overallbox .skills-boxes .skills-boxes-color1{
+    width: 70%;
+    min-height: 2vh;
+    border-radius: 10px;
+    animation-name: color1;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timeline: view();
+    animation-range: entry 10% cover 20%;
+
+}
+@keyframes color1{
+    0%{
+        width: 0%;
+        background-color: yellow;
+    }
+    20%{
+        background-color: yellow;
+    }
+    50%{
+        background-color: greenyellow;
+    }
+    100%{
+        width: 70%;
+        background-color: rgb(234, 99, 99);
+    }
+}
+
+.aboutpage .about-skills .skills-overallbox .skills-boxes .skills-boxes-color2{
+    width: 70%;
+    min-height: 2vh;
+    border-radius: 10px;
+    animation-name: color2;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timeline: view();
+    animation-range: entry 10% cover 20%;
+
+}
+@keyframes color2{
+    0%{
+        width: 0%;
+        background-color: yellow;
+    }
+    20%{
+        background-color: yellow;
+    }
+    50%{
+        background-color: greenyellow;
+    }
+    100%{
+        width: 70%;
+        background-color: rgb(234, 99, 99);
+    }
+}
+
+.aboutpage .about-skills .skills-overallbox .skills-boxes .skills-boxes-color3{
+    width: 70%;
+    min-height: 2vh;
+    border-radius: 10px;
+    animation-name: color3;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-timeline: view();
+    animation-range: entry 10% cover 20%;
+}
+@keyframes color3{
+    0%{
+        width: 0%;
+        background-color: yellow;
+    }
+    20%{
+        background-color: yellow;
+    }
+    50%{
+        background-color: greenyellow;
+    }
+    100%{
+        width: 60%;
+        background-color: rgb(30, 175, 30);
+    }
+}
+.aboutpage .about-skills .skills-overallbox .skills-boxes .skills-boxes-color4{
+    width: 70%;
+    min-height: 2vh;
+    border-radius: 10px;
+    animation-name: color4;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-timeline: view();
+    animation-range: entry 10% cover 20%;
+}
+@keyframes color4{
+    0%{
+        width: 0%;
+        background-color: yellow;
+    }
+    20%{
+        background-color: yellow;
+    }
+    50%{
+        background-color: greenyellow;
+    }
+    100%{
+        width: 60%;
+        background-color: rgb(30, 175, 30);
+    }
+}
+
+.aboutpage .about-skills .skills-overallbox .skills-boxes .skills-boxes-color5{
+    width: 70%;
+    min-height: 2vh;
+    border-radius: 10px;
+    animation-name: color5;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timeline: view();
+    animation-range: entry 10% cover 20%;
+
+}
+@keyframes color5{
+    0%{
+        width: 0%;
+        background-color: yellow;
+    }
+    20%{
+        background-color: yellow;
+    }
+    50%{
+        background-color: greenyellow;
+    }
+    100%{
+        width: 60%;
+        background-color: rgb(30, 175, 30);
+    }
+}
+
+.aboutpage .about-skills .skills-overallbox .skills-boxes .skills-boxes-color6{
+    width: 70%;
+    min-height: 2vh;
+    border-radius: 10px;
+    animation-name: color6;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timeline: view();
+    animation-range: entry 10% cover 20%;
+
+}
+@keyframes color6{
+    0%{
+        width: 0%;
+        background-color: yellow;
+    }
+    20%{
+        background-color: yellow;
+    }
+    50%{
+        background-color: greenyellow;
+    }
+    100%{
+        width: 60%;
+        background-color: rgb(30, 175, 30);
+    }
+}
+
+.aboutpage .about-skills .skills-overallbox .skills-boxes .skills-boxes-color7{
+    width: 70%;
+    min-height: 2vh;
+    border-radius: 10px;
+    animation-name: color7;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timeline: view();
+    animation-range: entry 10% cover 20%;
+
+}
+@keyframes color7{
+    0%{
+        width: 0%;
+        background-color: yellow;
+    }
+    20%{
+        background-color: yellow;
+    }
+    50%{
+        background-color: greenyellow;
+    }
+    100%{
+        width: 60%;
+        background-color: rgb(30, 175, 30);
+    }
+}
+
+.aboutpage .about-skills .skills-overallbox .skills-boxes .skills-boxes-color8{
+    width: 70%;
+    min-height: 2vh;
+    border-radius: 10px;
+    animation-name: color8;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timeline: view();
+    animation-range: entry 10% cover 20%;
+
+}
+@keyframes color8{
+    0%{
+        width: 0%;
+        background-color: yellow;
+    }
+    20%{
+        background-color: yellow;
+    }
+    50%{
+        background-color: greenyellow;
+    }
+    100%{
+        width: 60%;
+        background-color: rgb(30, 175, 30);
+    }
+}
+
+/*end of aboutpage codes*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*projectspage codes*/
+.projectspage{
+    width: 100%;
+    min-height: 100vh;
+}
+.project-box1{
+    width: 100%;
+    min-height: 20vh;
+    text-align: center;
+    align-content: center;
+    padding: 20px;
+    animation-name: projectbox1;
+    animation-duration: 3s;
+    animation-timeline: view();
+    animation-range: entry;
+}
+@keyframes projectbox1{
+    0%{
+        opacity: 10%;
+        transform: translatey(400px);
+    }
+    20%{
+        opacity: 50%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+.project-box1 h1{
+    font-size: 60px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);    
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.project-box2{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 15px;
+    padding: 15px;
+}
+
+.video-box {
+    min-height: 400px;
+    box-shadow: 2px 2px 5px #6e8efb,-2px -2px 5px #a777e3;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    animation-name: vid;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-timeline: view();
+    animation-range: entry 10% cover 50%;
+  }
+
+  
+  @keyframes vid {
+    0% {
+      transform: scale(0.3);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+.video-box video{
+    border-radius: 20px 20px 0px 0px;
+}
+
+video source{
+    height: 100%;
+    width: 100%;
+}
+
+.project-details{
+    height: 100%;
+    width: 100%;
+    padding: 8px;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.project-details:hover h4:first-child{
+    color: #a777e3;
+}
+  
+
+
+
+/*end of projectspage codes*/
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*contactpage codes*/
+.contactpage{
+    width: 100%;
+    min-height: 100vh;
+    animation-name: contactpage;
+    animation-duration: 3s;
+    animation-timeline: view();
+    animation-range: entry;
+}
+@keyframes contactpage{
+    0%{
+        opacity: 10%;
+        transform: translatey(400px);
+    }
+    20%{
+        opacity: 50%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+.contact-box1{
+    width: 100%;
+    min-height: 20px;
+    padding: 20px;
+    text-align: center;
+    align-content: center;
+}
+.contact-box1 h1{
+    font-size: 60px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);    
+    font-family: 'Segoe UI', sans-serif;
+}
+.contact-box2{
+    width: 100%;
+    min-height:30vh;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+}
+.contact-box2-boxes{
+    width: 100%;
+    min-height: 30vh;
+    text-align: center;
+    padding: 10px;
+}
+.contact-box2-boxes i{
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #a777e3;
+    margin: auto;
+    font-size: 30px;
+}
+.contact-box2-boxes i:hover{
+    background-color: #a777e3;
+    color: white;
+}
+.contact-box3{
+    width: 90%;
+    min-height: 80vh;
+    margin: auto;
+    display: flex;
+}
+.contact-box33{
+    width: 100%;
+}
+.contact-box33 img{
+    width: 100%;
+    height: 80vh;
+}
+.contact-box3-form{
+    width: 100%;
+    padding: 20px;
+    background: #f8f9fa !important;
+}
+.contact-box4{
+    width: 100%;
+    min-height: 60vh;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+}
+.contact-box4-boxes{
+    width: 100%;
+    min-height: 60vh;
+    padding: 20px;
+}
+.contact-box4-boxes h3{
+    font-size: 50px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.contact-box4-boxes div{
+    display: flex;
+    gap: 10px;
+}
+
+
+.contact-box4-boxes:nth-child(1) div i{
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.contact-box4-boxes:nth-child(1) div a{
+    text-decoration: none;
+}
+
+/*end of contactpage codes*/
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*portfolio page media queries*/
+@media only screen and (max-width:750px){
+    .f{
+        font-size: 1.4rem;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .navbar-toggler-icon{
+        width: 30px!important;
+        height: 30px!important;
+    }
+
+    .navbar h1{
+        font-size: 1.5rem;
+    }
+
+    .box1-content{
+        text-align: start;
+        align-content: end;
+    }
+
+    .port{
+        font-size: 1.5rem;
+    }
+
+    .b1,.b2{
+        width:100px;
+        height: 30px;
+        border-radius: 5px;
+    }
+
+    .navbar-toggler-icon{
+        color: white!important;
+    }
+    .homepage{
+        position: relative;
+    }
+
+    .ani-box h1{
+        font-size: 1.2rem;
+    }
+    .box1-content{
+        z-index: 998;
+        background-color: transparent;
+        text-align: start;
+        align-content: end;
+    }
+    .box1-image{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 997;
+    }
+
+    .box1-image img{
+        width: 100%;
+        height: 80vh;
+    }
+
+    .aboutpage{
+        flex-direction: column;
+    }
+    .skills-overallbox{
+        grid-template-columns: auto ;
+    }
+    .contact-box2{
+        grid-template-columns: auto;
+    }
+    .contact-box3{
+        flex-direction: column;
+    }
+    .contact-box4{
+        grid-template-columns: auto;
+    }
+
+    .navbar-toggler-icon {
+        display: inline-block;
+        width: 1.5em;
+        height: 1.5em;
+        vertical-align: middle;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        color: white!important;
+        background-color: white!important;
+    }
+    .navbar-light .navbar-toggler {
+        color: white!important;
+        border-color: rgba(0, 0, 0, .1);
+    }
+    button.navbar-toogler{
+        color: white!important;
+    }
+
+
+    .contact-box1 h1,.about-content>h1,.project-box1 h1,.about-skills>h1{
+        font-size: 1.5rem;
+    }
+
+    .project-details p{
+        font-size: 0.8rem;
+    }
+
+}
+
+
+
